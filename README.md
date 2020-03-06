@@ -1,18 +1,11 @@
-# vim-goimports
+# vim-gofmt
 
-Vim plugin for Minimalist Gopher
+Run `go fmt` on save. This plugin is a fork of [mattn/vim-goimports](https://github.com/mattn/vim-goimports).
 
 ## Features
 
 * Auto-formatting with `:w`
-* GoImport/GoImportAs
-
-This plugin is mostly based on vim-go.
-
-## Will not do
-
-* Add new commands
-* Modify syntax
+* `:GoFmt` command.
 
 ## Usage
 
@@ -20,31 +13,37 @@ This plugin is mostly based on vim-go.
 :w
 ```
 
+or
+
+```
+:GoFmt
+```
+
 ## Installation
 
-For [vim-plug](https://github.com/junegunn/vim-plug) plugin manager:
-
-```viml
-Plug 'mattn/vim-goimports'
-```
+Use your favorite plugin manager.
 
 ## Configuration
 
 ```viml
-" enable (default)
-let g:goimports = 1
-" disable
-let g:goimports = 0
+" enable auto format (default)
+let g:gofmt_on_save = 1
+" disable auto format
+let g:gofmt_on_save = 0
 ```
 
 ## Requirements
 
-* goimports
+* go
 
 ## License
 
 MIT
 
 ## Author
+
+Hiroaki Sano
+
+## Great vim-goimports author
 
 Yasuhiro Matsumoto (a.k.a. mattn)
